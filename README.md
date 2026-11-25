@@ -1,5 +1,5 @@
 # Ad Breakdown Portfolio
 
-**Live site:** file:///C:/Users/Mr%20Yash%20Yadav/Documents/Github/ad-breakdown-portfolio/index.html
+**Live site:** https://yashyadav1997.github.io/ad-breakdown-portfolio/Ad%20Breakdown.html
 
 Marketing teardowns of viral campaigns.

@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ad Breakdown Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Limelight&family=Roboto:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* Page and category colours, drawn from Alphametic (purple, orange, charcoal) and GAIA Digital (gold, blue) */
+:root{--bg:#faf8fd;--ink:#222222;--mute:#5d5868;--line:#e7e1f0;--hfont:'Limelight',serif;--bfont:'Roboto',sans-serif;--hweight:400;--radius:12px}
+.wrap{max-width:960px}
+/* Header: Zomato red and charcoal mixed with Bombay Shaving Company black and cyan */
+header.hero{background:linear-gradient(125deg,#000000 0%,#1c1c1c 40%,#8f1421 72%,#cb202d 100%);color:#fff;--stripe:linear-gradient(90deg,#ef4f5f 50%,#05e6fa)}
+header.hero .eyebrow{color:#05e6fa;font:400 15px/1.4 'Limelight',serif}
+/* Miami / Vice City mood: brush script title, art deco headings (free Google Fonts, not Rockstar's lettering) */
+header.hero h1{font-family:'Mr Dafoe',cursive;font-weight:400;font-size:clamp(50px,11vw,96px);line-height:1.15;text-shadow:3px 3px 0 rgba(0,0,0,.35)}
+header.hero h1 em{font-style:normal;color:#05e6fa}
+.tagline{font-style:normal;color:#ffffff;max-width:56ch}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+nav a{font:500 13px/1 var(--bfont);text-decoration:none;color:#222;background:#fff;border:2px solid var(--tone);border-radius:99px;padding:9px 14px}
+nav a:hover,nav a:focus-visible{background:var(--tone);color:var(--on)}
+.a{--tone:#0b5ed7;--on:#fff}.b{--tone:#ff8001;--on:#222}.c{--tone:#6713cb;--on:#fff}.d{--tone:#f5c22c;--on:#222}.e{--tone:#c62828;--on:#fff}
+h2.grp{margin:0 0 6px}h2.grp span{background:var(--tone);color:var(--on)}
+.why{font-size:14px;color:var(--mute);border-left:3px solid var(--tone);padding-left:10px;margin:0 0 16px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+a.card{display:flex;flex-direction:column;padding:0;overflow:hidden;text-decoration:none;color:var(--ink);background:var(--card);border-color:var(--line);transition:transform .15s,box-shadow .15s}
+a.card:hover,a.card:focus-visible{transform:translateY(-3px);box-shadow:0 8px 20px rgba(34,34,34,.18)}
+a.card h3{margin:0;min-height:76px;display:flex;align-items:center;padding:12px 14px;background:var(--hero);color:var(--hero-ink);font-size:21px;font-style:var(--hstyle);text-transform:var(--hcase);border-bottom:5px solid var(--badge)}
+a.card p{margin:0;padding:10px 14px 12px;font:14px/1.4 var(--bfont);flex:1}
+@media(prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
+</style></head><body><div class="wrap">
+<header class="hero"><div class="eyebrow">Marketing Portfolio</div><h1>Ad Breakdown <em>Reports</em></h1><p class="tagline">50 teardowns of viral campaigns: STP, AIDA, semiotics, competitors, KPIs and recommendations.</p></header>
+<nav aria-label="Categories"><a class="a" href="#classics">Global classics</a><a class="b" href="#social">Social-first</a><a class="c" href="#challengers">Challengers</a><a class="d" href="#india">India</a><a class="e" href="#backlash">Backlash</a></nav>
+
+<section id="classics" class="a"><h2 class="grp"><span>A</span>Global brand classics</h2><p class="why">Blue signals trust and staying power.</p><div class="grid">
+<a class="card" href="reports/nike-you-cant-stop-us.html"><h3>Nike</h3><p>You Can't Stop Us</p></a>
+<a class="card" href="reports/nike-dream-crazy.html"><h3>Nike</h3><p>Dream Crazy</p></a>
+<a class="card" href="reports/dove-real-beauty-sketches.html"><h3>Dove</h3><p>Real Beauty Sketches</p></a>
+<a class="card" href="reports/coca-cola-share-a-coke.html"><h3>Coca-Cola</h3><p>Share a Coke</p></a>
+<a class="card" href="reports/old-spice-the-man-your-man-could-smell-like.html"><h3>Old Spice</h3><p>The Man Your Man Could Smell Like</p></a>
+<a class="card" href="reports/apple-shot-on-iphone.html"><h3>Apple</h3><p>Shot on iPhone</p></a>
+<a class="card" href="reports/apple-mother-nature.html"><h3>Apple</h3><p>Mother Nature</p></a>
+<a class="card" href="reports/airbnb-we-accept.html"><h3>Airbnb</h3><p>We Accept</p></a>
+<a class="card" href="reports/always-likeagirl.html"><h3>Always</h3><p>#LikeAGirl</p></a>
+<a class="card" href="reports/red-bull-stratos.html"><h3>Red Bull</h3><p>Stratos</p></a>
+<a class="card" href="reports/cadbury-gorilla.html"><h3>Cadbury</h3><p>Gorilla</p></a>
+<a class="card" href="reports/volvo-trucks-epic-split.html"><h3>Volvo Trucks</h3><p>The Epic Split</p></a>
+<a class="card" href="reports/sony-bravia-balls.html"><h3>Sony Bravia</h3><p>Balls</p></a>
+<a class="card" href="reports/evian-roller-babies.html"><h3>Evian</h3><p>Roller Babies</p></a>
+<a class="card" href="reports/chipotle-back-to-the-start.html"><h3>Chipotle</h3><p>Back to the Start</p></a>
+<a class="card" href="reports/patagonia-dont-buy-this-jacket.html"><h3>Patagonia</h3><p>Don't Buy This Jacket</p></a>
+<a class="card" href="reports/gillette-the-best-men-can-be.html"><h3>Gillette</h3><p>The Best Men Can Be</p></a>
+<a class="card" href="reports/heinz-draw-ketchup.html"><h3>Heinz</h3><p>Draw Ketchup</p></a>
+</div></section>
+
+<section id="social" class="b"><h2 class="grp"><span>B</span>Social-first and real-time</h2><p class="why">Orange signals energy, speed and participation.</p><div class="grid">
+<a class="card" href="reports/oreo-dunk-in-the-dark.html"><h3>Oreo</h3><p>Dunk in the Dark</p></a>
+<a class="card" href="reports/wendys-twitter-nuggs-for-carter.html"><h3>Wendy's</h3><p>Twitter persona</p></a>
+<a class="card" href="reports/spotify-wrapped.html"><h3>Spotify</h3><p>Wrapped</p></a>
+<a class="card" href="reports/duolingo-death-of-duo.html"><h3>Duolingo</h3><p>Death of Duo</p></a>
+<a class="card" href="reports/ryanair-tiktok.html"><h3>Ryanair</h3><p>TikTok strategy</p></a>
+<a class="card" href="reports/ocean-spray-cranberry-tiktok.html"><h3>Ocean Spray</h3><p>Cranberry TikTok</p></a>
+<a class="card" href="reports/mcdonalds-travis-scott-meal.html"><h3>McDonald's</h3><p>Travis Scott Meal</p></a>
+<a class="card" href="reports/mcdonalds-grimace-shake.html"><h3>McDonald's</h3><p>Grimace Shake</p></a>
+<a class="card" href="reports/burger-king-moldy-whopper.html"><h3>Burger King</h3><p>Moldy Whopper</p></a>
+<a class="card" href="reports/kfc-fck-apology.html"><h3>KFC</h3><p>FCK</p></a>
+<a class="card" href="reports/tide-its-a-tide-ad.html"><h3>Tide</h3><p>It's a Tide Ad</p></a>
+<a class="card" href="reports/amazon-alexa-loses-her-voice.html"><h3>Amazon</h3><p>Alexa Loses Her Voice</p></a>
+<a class="card" href="reports/barbie-the-movie-campaign.html"><h3>Barbie</h3><p>Movie campaign</p></a>
+<a class="card" href="reports/ikea-bookbook.html"><h3>IKEA</h3><p>BookBook</p></a>
+</div></section>
+
+<section id="challengers" class="c"><h2 class="grp"><span>C</span>Challengers and DTC</h2><p class="why">Purple signals originality and breaking category rules.</p><div class="grid">
+<a class="card" href="reports/dollar-shave-club-our-blades.html"><h3>Dollar Shave Club</h3><p>Our Blades Are F***ing Great</p></a>
+<a class="card" href="reports/blendtec-will-it-blend.html"><h3>Blendtec</h3><p>Will It Blend?</p></a>
+<a class="card" href="reports/liquid-death-murder-your-thirst.html"><h3>Liquid Death</h3><p>Murder Your Thirst</p></a>
+<a class="card" href="reports/prime-hydration.html"><h3>Prime Hydration</h3><p>Influencer launch</p></a>
+<a class="card" href="reports/poo-pourri-girls-dont-poop.html"><h3>Poo-Pourri</h3><p>Girls Don't Poop</p></a>
+</div></section>
+
+<section id="india" class="d"><h2 class="grp"><span>D</span>India</h2><p class="why">Gold signals warmth, optimism and celebration.</p><div class="grid">
+<a class="card" href="reports/amul-topicals.html"><h3>Amul</h3><p>Topicals</p></a>
+<a class="card" href="reports/cadbury-not-just-a-cadbury-ad.html"><h3>Cadbury Dairy Milk</h3><p>Not Just a Cadbury Ad</p></a>
+<a class="card" href="reports/fevicol-ka-mazboot-jod.html"><h3>Fevicol</h3><p>Ka Mazboot Jod</p></a>
+<a class="card" href="reports/tata-tea-jaago-re.html"><h3>Tata Tea</h3><p>Jaago Re</p></a>
+<a class="card" href="reports/surf-excel-daag-acche-hain.html"><h3>Surf Excel</h3><p>Daag Acche Hain</p></a>
+<a class="card" href="reports/google-reunion.html"><h3>Google</h3><p>Reunion</p></a>
+<a class="card" href="reports/cred-indiranagar-ka-gunda.html"><h3>CRED</h3><p>Indiranagar Ka Gunda</p></a>
+<a class="card" href="reports/vicks-touch-of-care.html"><h3>Vicks</h3><p>Touch of Care</p></a>
+<a class="card" href="reports/airtel-har-ek-friend-zaroori.html"><h3>Airtel</h3><p>Har Ek Friend Zaroori Hai</p></a>
+<a class="card" href="reports/vodafone-zoozoos.html"><h3>Vodafone</h3><p>ZooZoos</p></a>
+</div></section>
+
+<section id="backlash" class="e"><h2 class="grp"><span>E</span>Backlash case studies</h2><p class="why">Red signals caution: what to learn before repeating it.</p><div class="grid">
+<a class="card" href="reports/pepsi-live-for-now-kendall-jenner.html"><h3>Pepsi</h3><p>Live for Now Moments Anthem</p></a>
+<a class="card" href="reports/bud-light-dylan-mulvaney.html"><h3>Bud Light</h3><p>Influencer partnership backlash</p></a>
+<a class="card" href="reports/tanishq-ekatvam.html"><h3>Tanishq</h3><p>Ekatvam</p></a>
+</div></section>
+
+<footer>Independent analysis. Brands and campaigns belong to their owners. Figures are publicly reported and should be verified before commercial use.</footer></div>
+<script src="assets/themes.js"></script>
+<script>
+document.querySelectorAll("a.card").forEach(function (a) { AdThemes.apply(a, a.getAttribute("href").split("/").pop().replace(".html", "")); });
+</script></body></html>

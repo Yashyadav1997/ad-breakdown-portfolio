@@ -1,0 +1,28 @@
+(function () {
+  var d = JSON.parse(document.getElementById("data").textContent);
+  var e = function (s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
+  var li = function (a) { return "<ul>" + a.map(function (x) { return "<li>" + e(x) + "</li>"; }).join("") + "</ul>"; };
+  var sec = function (n, t, body) { return "<section><h2><span>" + n + "</span>" + t + "</h2>" + body + "</section>"; };
+  var card = function (t, b) { return '<div class="card"><h3>' + t + "</h3><p>" + e(b) + "</p></div>"; };
+  var c = d.creative, s = d.stp, a = d.aida, sm = c.semiotics;
+  document.title = d.brand + " – " + d.name + " | Ad Breakdown";
+  var h = "";
+  h += '<header class="hero"><div class="eyebrow">Ad Breakdown Report · ' + e(d.industry) + "</div><h1>" + e(d.name) + "</h1><p class=\"tagline\">" + e(d.brand) + " — " + e(d.tagline) + "</p></header>";
+  h += sec("01", "Campaign Overview", '<div class="meta"><div><b>Brand</b>' + e(d.brand) + "</div><div><b>Campaign</b>" + e(d.name) + "</div><div><b>Launch &amp; duration</b>" + e(d.launch) + "</div><div><b>Platforms</b>" + e(d.platforms) + "</div><div><b>Market</b>" + e(d.market) + "</div></div>");
+  h += sec("02", "Business Problem / Context", "<p>" + e(d.problem) + "</p><p><b>Objective:</b> " + e(d.objective) + "</p>");
+  h += sec("03", "Target Audience &amp; Consumer Insight", '<div class="grid">' + card("Primary audience", d.audience.who) + card("Consumer insight", d.audience.insight) + "</div>");
+  h += sec("04", "Brand Proposition / Core Message", '<div class="grid">' + card("Single key message", d.proposition.message) + card("Unique selling proposition", d.proposition.usp) + "</div>");
+  var sw = (c.colors || []).map(function (x) { return '<div class="sw" style="background:' + e(x) + '" title="' + e(x) + '"></div>'; }).join("");
+  h += sec("05", "Creative Execution", "<h3>Style, tone &amp; storytelling</h3><p>" + e(c.style) + "</p><h3>Music &amp; sound</h3><p>" + e(c.music) + '</p><h3>Colour palette</h3><div class="swatches">' + sw + "</div><h3>Copywriting style</h3><p>" + e(c.copy) + '</p><h3>Semiotics breakdown</h3><div class="grid">' + card("Setting", sm.setting) + card("Props", sm.props) + card("Characters", sm.characters) + card("Symbolism", sm.symbolism) + card("Brand reveal", sm.reveal) + "</div>");
+  h += sec("06", "STP Analysis", '<div class="grid">' + card("Segmentation", s.seg) + card("Targeting", s.target) + card("Positioning", s.pos) + "</div>");
+  h += sec("07", "AIDA Model Analysis", '<div class="grid">' + card("Attention", a.a) + card("Interest", a.i) + card("Desire", a.d) + card("Action", a.act) + "</div>");
+  h += sec("08", "Competitor Comparison", "<table><tr><th>Competitor</th><th>Campaign</th><th>How it compares</th></tr>" + d.competitors.map(function (x) { return "<tr><td>" + e(x.name) + "</td><td>" + e(x.campaign) + "</td><td>" + e(x.compare) + "</td></tr>"; }).join("") + "</table><p style=\"margin-top:12px\"><b>Verdict:</b> " + e(d.verdict) + "</p>");
+  h += sec("09", "Campaign Results &amp; KPIs", '<div class="kpis">' + d.results.map(function (x) { return '<div class="kpi"><b>' + e(x.v) + "</b><small>" + e(x.k) + "</small></div>"; }).join("") + '</div><div class="note">Figures are as publicly reported by the brand, agency or trade press at the time. Verify against the original source before citing commercially. Where no figure is shown, none was publicly confirmed.</div>');
+  h += sec("10", "What Worked / What Didn't", '<div class="two"><div class="card good"><h3>Worked well</h3>' + li(d.worked) + '</div><div class="card bad"><h3>Could be improved</h3>' + li(d.improve) + "</div></div>");
+  h += sec("11", "Recommendations", li(d.recs));
+  h += '<a class="back" href="../index.html">← All 50 reports</a><footer>Portfolio analysis. Brand names and campaigns belong to their respective owners; this is independent commentary.</footer>';
+  document.getElementById("app").innerHTML = h;
+  var t = document.createElement("script");
+  t.src = "../assets/themes.js";
+  document.head.appendChild(t);
+})();
